@@ -35,6 +35,8 @@
 (autoload 'ruby-mode "ruby-mode" "Load ruby mode" t)
 (add-to-list 'auto-mode-alist '("\\.rb$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("[Rr]akefile" . ruby-mode))
+(add-to-list 'auto-mode-alist '("[Gg]emfile" . ruby-mode))
+(add-to-list 'auto-mode-alist '("[Aa]ssetfile" . ruby-mode))
 
 ;; php-mode
 (autoload 'php-mode "php-mode.el" nil t)
