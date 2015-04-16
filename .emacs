@@ -1,14 +1,6 @@
 ;; Common Lisp
 (require 'cl)
 
-(defvar emacs-root "/Users/tce/")
-
-(labels ((add-path (p)
-         (add-to-list 'load-path
-                      (concat emacs-root p))))
-  (add-path ".emacs.d/") ;; .emacs.d files
-)
-
 ;; Show columns
 (setq-default column-number-mode t)
 
@@ -32,32 +24,7 @@
       "http://marmalade-repo.org/packages/"))
 (package-initialize)
 
-;; javascript-mode
-(autoload 'js2-mode "js2.elc" "Load JS2 mode." t)
-(add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
-
-;; coffee-mode
-(add-to-list 'load-path (concat emacs-root ".emacs.d/coffee-mode"))
-(require 'coffee-mode)
-(add-to-list 'auto-mode-alist '("\\.coffee" . coffee-mode))
-(add-to-list 'auto-mode-alist '("Cakefile" . coffee-mode))
-
-;; haml-mode
-(add-to-list 'load-path (concat emacs-root ".emacs.d/haml-mode"))
-(require 'haml-mode)
-(add-to-list 'auto-mode-alist '("\\.haml" . haml-mode))
-
-;; sass-mode
-(add-to-list 'load-path (concat emacs-root ".emacs.d/sass-mode"))
-(require 'sass-mode)
-(add-to-list 'auto-mode-alist '("\\.sass" . sass-mode))
-
-;; scss-mode
-(autoload 'scss-mode "scss-mode.el" nil t)
-(require 'scss-mode)
-
-;; handlebars-mode
-(require 'handlebars-mode)
+(setq-default show-trailing-whitespace t)
 
 ;; ido-mode
 (require 'ido)
@@ -72,9 +39,12 @@
 (add-to-list 'auto-mode-alist '("[Gg]emfile" . ruby-mode))
 (add-to-list 'auto-mode-alist '("[Aa]ssetfile" . ruby-mode))
 
-;; php-mode
-(autoload 'php-mode "php-mode.el" nil t)
-(add-to-list 'auto-mode-alist '("\\.\\(php\\|inc\\)$" . php-mode))
+(setq backup-directory-alist `((".*" . ,temporary-file-directory)))
+(setq auto-save-file-name-transforms `((".*" ,temporary-file-directory t)))
+(setq create-lockfiles nil)
+
+(require 'handlebars-mode)
+(add-to-list 'auto-mode-alist '("\\.hbs$" . handlebars-mode))
 
 (custom-set-variables
   ;; custom-set-variables was added by Custom.
@@ -82,7 +52,7 @@
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
  '(gud-gdb-command-name "gdb --annotate=1")
- '(js2-basic-offset 2)
+ '(js-indent-level 2)
  '(scss-compile-at-save nil)
  '(large-file-warning-threshold nil))
 (custom-set-faces
