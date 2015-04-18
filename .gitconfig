@@ -1,0 +1,32 @@
+[user]
+	name = Tim Evans
+	email = tim.c.evans@me.com
+[core]
+	editor = emacs
+	whitespace = trailing-space,indent-with-non-tab,blank-at-eol,blank-at-eof
+	excludesfile = ~/.gitignore
+[color]
+	ui = auto
+[advice]
+	statusHints = false
+	pushNonFastForward = false
+[diff]
+	renames = copies
+	mnemonicprefix = true
+[branch]
+	autosetupmerge = true
+[push]
+	default = tracking
+[rerere]
+	enabled = true
+[merge]
+	stat = true
+[alias]
+	co = checkout
+	st = status
+	br = branch -vv
+	ci = commit
+	lg = log --graph --oneline
+  undo = reset --soft HEAD@{1}
+[github]
+  user = tim-evans
