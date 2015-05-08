@@ -226,7 +226,7 @@
 	<key>WindowTitle</key>
 	<string></string>
 	<key>name</key>
-	<string>Pro</string>
+	<string>Simple</string>
 	<key>shellExitAction</key>
 	<integer>1</integer>
 	<key>type</key>
