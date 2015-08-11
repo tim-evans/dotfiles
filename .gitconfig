@@ -1,32 +1,36 @@
 [user]
-	name = Tim Evans
-	email = tim.c.evans@me.com
+  name = Tim Evans
+  email = tevans@movableink.com
 [core]
-	editor = emacs
-	whitespace = trailing-space,indent-with-non-tab,blank-at-eol,blank-at-eof
-	excludesfile = ~/.gitignore
+  editor = emacs
+  whitespace = trailing-space,indent-with-tab,blank-at-eol,blank-at-eof
+  excludesfile = ~/.gitignore
 [color]
-	ui = auto
+  ui = auto
 [advice]
-	statusHints = false
-	pushNonFastForward = false
+  statusHints = false
+  pushNonFastForward = false
 [diff]
-	renames = copies
-	mnemonicprefix = true
+  renames = copies
+  mnemonicprefix = true
 [branch]
-	autosetupmerge = true
+  autosetupmerge = true
 [push]
-	default = tracking
+  default = tracking
 [rerere]
-	enabled = true
+  enabled = true
 [merge]
-	stat = true
+  stat = true
 [alias]
-	co = checkout
-	st = status
-	br = branch -vv
-	ci = commit
-	lg = log --graph --oneline
+  co = checkout
+  st = status
+  br = branch -vv
+  ci = commit
+  lg = log --graph --oneline
   undo = reset --soft HEAD@{1}
 [github]
   user = tim-evans
+[filter "lfs"]
+  clean = git lfs clean %f
+  smudge = git lfs smudge %f
+  required = true
