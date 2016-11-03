@@ -1,6 +1,6 @@
 [user]
   name = Tim Evans
-  email = tevans@movableink.com
+  email = tim.c.evans@me.com
 [core]
   editor = emacs
   whitespace = trailing-space,indent-with-tab,blank-at-eol,blank-at-eof
