@@ -53,6 +53,7 @@
   ;; If there is more than one, they won't work right.
  '(gud-gdb-command-name "gdb --annotate=1")
  '(js-indent-level 2)
+ '(css-indent-offset 2)
  '(scss-compile-at-save nil)
  '(large-file-warning-threshold nil))
 (custom-set-faces
